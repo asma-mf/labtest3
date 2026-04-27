@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 import productRoutes from "./routes/productRoutes.js";
-
+import { setServers } from "node:dns/promises";
+setServers(["1.1.1.1", "8.8.8.8", "8.8.4.4"]);
 dotenv.config();
 
 const app = express();
