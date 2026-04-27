@@ -10,7 +10,7 @@ function ProductCard({ product, onDelete }) {
     stockEl = <span style ={{color : "yellow"}}> stock is low</span>
   }
   else{
-    stockEl = <span style ={{color : "red"}}> stock is low</span>
+    stockEl = <span style ={{color : "red"}}> out of stock</span>
   }
 
   return (
