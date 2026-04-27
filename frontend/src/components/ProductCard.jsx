@@ -27,7 +27,7 @@ function ProductCard({ product, onDelete }) {
 
      
 
-      
+      {stockEl}
 
       <p>{product.description}</p>
       <div className="card-actions">
