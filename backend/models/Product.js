@@ -26,7 +26,14 @@ const productSchema = new mongoose.Schema(
       type: String,
       default: "",
       trim: true,
-    }
+    },
+    
+    stockQuantity: {
+      type: Number,
+      required: [true, "Price is required"],
+      min: [0, "Price cannot be negative"], 
+    },
+    
   },
   { timestamps: true }
 );

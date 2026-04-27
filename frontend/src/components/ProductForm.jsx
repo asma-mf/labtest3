@@ -7,7 +7,9 @@ function ProductForm({ initialValues, onSubmit, submitText }) {
       brand: "",
       price: "",
       description: "",
-      imageUrl: ""
+      imageUrl: "",
+      stockQuantity: ""
+
     }
   );
 
@@ -34,6 +36,19 @@ function ProductForm({ initialValues, onSubmit, submitText }) {
       <label>Brand</label>
       <input name="brand" value={formData.brand} onChange={handleChange} required />
 
+      <label>stock Quantity</label>
+      <input
+        type="number"
+        name="stockQuantity"
+        value={formData.stockQuantity}
+        onChange={handleChange}
+        min="0"
+        step="0.01"
+        required
+      />
+      
+
+
       <label>Price ($)</label>
       <input
         type="number"
@@ -53,6 +68,7 @@ function ProductForm({ initialValues, onSubmit, submitText }) {
         onChange={handleChange}
         required
       />
+     
 
       <label>Image URL (optional)</label>
       <input name="imageUrl" value={formData.imageUrl} onChange={handleChange} />
